@@ -1,50 +1,51 @@
 import pytest
-
+import data 
 from pages.main_page import MainPage
 from locators.main_page_locators import MainPageLocators
-
+import allure 
 
 class TestQuestions:
-
+    
+    @allure.title("Проверка ответов в блоке Вопросы о важном")
     @pytest.mark.parametrize(
         "question_locator, answer_locator, expected_text",
         [
-            (MainPageLocators.QUESTION_0, MainPageLocators.ANSWER_0, MainPageLocators.ANSWER_0_TEXT
+            (MainPageLocators.QUESTION_0, MainPageLocators.ANSWER_0, data.ANSWER_0_TEXT
             ),
             (
                 MainPageLocators.QUESTION_1,
                 MainPageLocators.ANSWER_1,
-                MainPageLocators.ANSWER_1_TEXT
+                data.ANSWER_1_TEXT
             ),
             (
                 MainPageLocators.QUESTION_2,
                 MainPageLocators.ANSWER_2,
-                MainPageLocators.ANSWER_2_TEXT
+                data.ANSWER_2_TEXT
             ),
             (
                 MainPageLocators.QUESTION_3,
                 MainPageLocators.ANSWER_3,
-                MainPageLocators.ANSWER_3_TEXT
+                data.ANSWER_3_TEXT
             ),
             (
                 MainPageLocators.QUESTION_4,
                 MainPageLocators.ANSWER_4,
-                MainPageLocators.ANSWER_4_TEXT
+                data.ANSWER_4_TEXT
             ),
             (
                 MainPageLocators.QUESTION_5,
                 MainPageLocators.ANSWER_5,
-                MainPageLocators.ANSWER_5_TEXT
+                data.ANSWER_5_TEXT
             ),
             (
                 MainPageLocators.QUESTION_6,
                 MainPageLocators.ANSWER_6,
-                MainPageLocators.ANSWER_6_TEXT
+                data.ANSWER_6_TEXT
             ),
             (
                 MainPageLocators.QUESTION_7,
                 MainPageLocators.ANSWER_7,
-                MainPageLocators.ANSWER_7_TEXT
+                data.ANSWER_7_TEXT
             ),
         ]
     )
